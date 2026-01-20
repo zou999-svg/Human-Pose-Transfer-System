@@ -1,0 +1,159 @@
+:root{
+  --bg0:#070a12;
+  --bg1:#0b1020;
+  --card: rgba(255,255,255,.08);
+  --card2: rgba(255,255,255,.06);
+  --stroke: rgba(255,255,255,.14);
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.70);
+  --muted2: rgba(255,255,255,.52);
+  --shadow: 0 18px 60px rgba(0,0,0,.35);
+  --radius: 18px;
+  --radius2: 14px;
+}
+
+html,body,#app{ height:100%; }
+body{
+  margin:0;
+  color:var(--text);
+  background:
+    radial-gradient(1100px 600px at 10% 0%, rgba(99,102,241,.26), transparent 60%),
+    radial-gradient(900px 500px at 100% 30%, rgba(16,185,129,.18), transparent 55%),
+    radial-gradient(900px 600px at 50% 120%, rgba(236,72,153,.16), transparent 60%),
+    linear-gradient(180deg, var(--bg1) 0%, var(--bg0) 100%);
+  font-family: ui-sans-serif, system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", Arial;
+}
+
+a{ color:inherit; }
+
+/* 通用：玻璃卡片 */
+.glass{
+  background: linear-gradient(180deg, var(--card), var(--card2));
+  border: 1px solid var(--stroke);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+}
+
+/* Vant：把所有“黑字”改成浅色（你说的 CPU 模式/昵称 等就是这里） */
+.van-cell__title,
+.van-cell__value,
+.van-field__label,
+.van-field__control,
+.van-nav-bar__title,
+.van-nav-bar__text,
+.van-icon{
+  color: var(--text) !important;
+}
+.van-cell__label{
+  color: var(--muted2) !important;
+}
+.van-field__control::placeholder{
+  color: rgba(255,255,255,.45) !important;
+}
+
+/* 让 cell/field 背景透明 */
+.van-cell, .van-field{
+  background: transparent !important;
+}
+
+/* Tabs 文案 */
+.van-tab{
+  color: var(--muted2) !important;
+}
+.van-tab--active{
+  color: var(--text) !important;
+}
+
+/* Tabbar 毛玻璃 */
+.van-tabbar{
+  background: rgba(10,12,22,.62) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(255,255,255,.10);
+}
+
+/* inset 卡片圆角 */
+.van-cell-group--inset{
+  border-radius: var(--radius) !important;
+  overflow: hidden;
+  background: transparent !important;
+}
+
+/* 按钮 */
+.btn-primary{
+  border-radius: 16px !important;
+  border: 0 !important;
+  background: linear-gradient(135deg, rgba(99,102,241,1), rgba(236,72,153,1)) !important;
+  box-shadow: 0 14px 40px rgba(99,102,241,.25);
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+.btn-ghost{
+  border-radius: 16px !important;
+  background: rgba(255,255,255,.08) !important;
+  border: 1px solid rgba(255,255,255,.14) !important;
+  color: var(--text) !important;
+}
+
+/* 小字提示 */
+.hint{
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================
+   Vant 深色模式可见性修复
+   ========================= */
+
+/* Tabs 顶部条：把默认白底去掉，改成深色毛玻璃 */
+.van-tabs__wrap{
+  background: rgba(255,255,255,.06) !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  border-radius: 14px !important;
+  overflow: hidden;
+}
+.van-tabs__nav{
+  background: transparent !important;
+}
+.van-tab{
+  color: rgba(255,255,255,.80) !important;
+  font-weight: 800 !important;
+}
+.van-tab--active{
+  color: rgba(255,255,255,.98) !important;
+}
+.van-tabs__line{
+  background: rgba(255,255,255,.90) !important;
+  height: 3px !important;
+  border-radius: 999px !important;
+}
+
+/* Uploader：上传按钮 + “从本地选择图片/视频”的文字颜色 */
+.van-uploader__upload{
+  background: rgba(255,255,255,.08) !important;
+  border: 1px dashed rgba(255,255,255,.20) !important;
+}
+.van-uploader__upload-icon{
+  color: rgba(255,255,255,.88) !important;
+}
+.van-uploader__upload-text{
+  color: rgba(255,255,255,.88) !important;
+  font-weight: 800 !important;
+}
+
+/* Tabbar：底部“生成/记录/我的”更清晰 */
+.van-tabbar-item__text{
+  color: rgba(255,255,255,.82) !important;
+  font-weight: 800 !important;
+}
+.van-tabbar-item__icon .van-icon{
+  color: rgba(255,255,255,.82) !important;
+}
+.van-tabbar-item--active .van-tabbar-item__text{
+  color: rgba(255,255,255,.98) !important;
+  font-weight: 900 !important;
+}
+.van-tabbar-item--active .van-tabbar-item__icon .van-icon{
+  color: rgba(255,255,255,.98) !important;
+}

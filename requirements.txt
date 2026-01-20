@@ -1,0 +1,55 @@
+# 人物姿态迁移系统 - Python 依赖（后端/模型）
+# 用法：pip install -r requirements.txt
+#
+# 说明：
+# - PyTorch 建议按你的 CUDA/CPU 环境从官网命令安装： https://pytorch.org/get-started/locally/
+# - 本文件覆盖 first-order-model-master 下的 Gradio Demo / FastAPI 后端 / 训练&推理脚本所需的常用依赖
+
+# -------------------------
+# 深度学习 / 数值计算
+# -------------------------
+torch
+torchvision
+numpy
+scipy
+
+# -------------------------
+# 图像/视频处理
+# -------------------------
+pillow
+scikit-image
+imageio[ffmpeg]
+ffmpeg-python
+
+# -------------------------
+# 训练/评估常用工具
+# -------------------------
+tqdm
+PyYAML
+matplotlib
+pandas
+scikit-learn
+
+# -------------------------
+# Web 后端（FastAPI）
+# -------------------------
+fastapi
+uvicorn[standard]
+python-multipart
+
+# -------------------------
+# 鉴权/数据库（server.py 用到）
+# -------------------------
+SQLAlchemy
+passlib[bcrypt]
+python-jose[cryptography]
+
+# -------------------------
+# 可视化 Demo（Gradio）
+# -------------------------
+gradio
+
+# -------------------------
+# 辅助脚本（如 crop-video.py）
+# -------------------------
+face-alignment
