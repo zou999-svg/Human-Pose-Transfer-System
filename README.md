@@ -169,7 +169,7 @@ uvicorn api_server:app --host 0.0.0.0 --port 8001
 
 训练代码位于 `first-order-model-master/`，入口脚本为 `run.py`（支持 `train / reconstruction / animate` 三种模式）。
 
-### 1) 数据准备（自建数据集）
+### 1) 数据准备（来源参考https://github.com/AliaksandrSiarohin/first-order-model里面的数据集来源）
 
 按 `FramesDataset` 约定准备数据目录（推荐先统一分辨率，例如 256×256）：
 
