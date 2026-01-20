@@ -24,7 +24,7 @@
 
 ## 整体模型框架图
 
-![整体模型框架图](模型框架图.png)
+![整体模型框架图](assets/模型框架图.png)
 
 ---
 
@@ -40,10 +40,20 @@
 
 ---
 
-## 目录结构（重点）
+## 目录结构
 
 ```
-人物姿态迁移系统/
+Human-Pose-Transfer-System/
+├─ assets/                                 # 报告/展示素材（框架图、对比图、演示视频等）
+│  ├─ 模型框架图.png
+│  ├─ GAN.jpg
+│  ├─ motion.jpg
+│  ├─ 前端.jpg
+│  ├─ 后端.jpg
+│  ├─ 图像生成.jpg
+│  ├─ 损失函数.jpg
+│  ├─ 有GAN.mp4
+│  └─ 无GAN.mp4
 ├─ first-order-model-master/               # 模型与后端（Python）
 │  ├─ config/                              # 数据集/模型 yaml 配置（vox/taichi/...）
 │  ├─ modules/                             # 核心网络：generator/discriminator/kp_detector/dense_motion
@@ -65,8 +75,8 @@
 │  │  ├─ router/ stores/ components/ styles/
 │  ├─ vite.config.js                       # dev 代理：/api -> http://127.0.0.1:8000
 │  └─ package.json                         # 前端依赖与脚本
-├─ requirements.txt                        # Python 依赖（本仓库根目录）
-└─ *.jpg / *.mp4                           # 报告/展示用素材（对比视频、网络结构示意图等）
+├─ README.md                               # 项目说明（本文件）
+└─ requirements.txt                        # Python 依赖（本仓库根目录）
 ```
 
 ---
